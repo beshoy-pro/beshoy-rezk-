@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Beshoy Rezk, a web designer and developer.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Beshoy Rezk - Portfolio</title>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="#" class="logo">Beshoy Rezk</a>
+        <nav class="navigation">
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="Contacts.html">Contact</a>
+            <a href="#main">main</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main" name="main">
+        <div>
+            <h2 class="hidden">Hello, I'm Beshoy Rezk<br><span>I'm a Web Designer</span></h2>
+            <h3 class="hidden">I build amazing programs and websites!</h3>
+            <a href="#projects" class="main-btn hidden">View My Work</a>
+            <div class="social-icons hidden">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/besho__rezk?igsh=ZTV5N2NhMnQxbjE1" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="cards">
+        <h2 class="title hidden">Skills</h2>
+        <div class="content hidden">
+            <!-- Card 1 -->
+            <div class="card hidden">
+                <div class="icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="info">
+                    <h3>Web Development</h3>
+                    <p>Create and develop websites using HTML and CSS.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->l
+            <div class="card hidden">
+                <div class="icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="info">
+                    <h3>ChatGPT</h3>
+                    <p>Design and develop chatbots with Python.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card hidden">
+                <div class="icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="info">
+                    <h3>2D Game Development</h3>
+                    <p>Design and develop engaging 2D games.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="title hidden" id="tit">Projects</h2>
+        <div class="project-images hidden">
+            <img src="1.png" class="img" alt="Project 1">
+            <img src="2.png" class="img" alt="Project 2">
+            <img src="3.png" class="img" alt="Project 3">
+        </div>
+    </section>
+    <script>
+    // Scroll animation for .hidden elements
+    document.addEventListener("DOMContentLoaded", () => {
+        const hiddenElements = document.querySelectorAll('.hidden');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+        hiddenElements.forEach(el => observer.observe(el));
+    });
+    </script>
+</body>
+
+</html>

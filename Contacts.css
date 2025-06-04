@@ -1,0 +1,130 @@
+/* Styling for the Contact Page */
+
+/* Header (h1) Styling */
+h1 {
+    background-color: #4a90e2; /* Soft blue for the header */
+    border-radius: 10px;
+    width: 250px; /* Increased width for better readability */
+    height: auto; /* Adjust height to fit content */
+    text-align: center;
+    padding: 15px; /* Add padding for better spacing */
+    margin: 20px auto; /* Center the header with spacing */
+    font-size: 1.8rem; /* Larger font size for emphasis */
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+h1:hover {
+    background-color: #357ab8; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Paragraph (p) Styling */
+p {
+    text-align: center;
+    font-size: 1.2rem; /* Slightly larger font size */
+    color: #4a90e2; /* Soft blue for text */
+    margin: 10px 0; /* Add spacing between paragraphs */
+    line-height: 1.8; /* Improve readability */
+}
+
+p a {
+    color: #357ab8; /* Darker blue for links */
+    text-decoration: none; /* Remove underline from links */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+p a:hover {
+    color: #f5a623; /* Warm orange for hover effect */
+}
+
+/* Main Container Styling */
+main {
+    background-color: #f7f8fc; /* Light gray background for contrast */
+    width: 600px;
+    height: auto; /* Adjust height to fit content */
+    margin: 40px auto; /* Center the container with spacing */
+    padding: 30px; /* Add padding inside the container */
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Add a deeper shadow for depth */
+    border: 2px solid #4a90e2; /* Add a border matching the theme */
+}
+
+/* Navigation Styling */
+.navigation ul {
+    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Add spacing between navigation items */
+    padding: 0;
+    margin: 20px 0;
+}
+.navigation li{
+    font-size: 17px; /* Font size for navigation items */
+}
+
+.navigation a {
+    color: #4a90e2; /* Soft blue for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navigation a:hover {
+    color: #f5a623; /* Warm orange for hover effect */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2c3e50; /* Dark slate blue for footer */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow above the footer */
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+/* Ensure Footer Stays at the Bottom */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+main {
+    flex: 1; /* Allow the main content to grow and take up available space */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        width: 90%; /* Make the header responsive */
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+        padding: 10px;
+    }
+
+    main {
+        width: 90%; /* Adjust the container width for smaller screens */
+        padding: 20px;
+    }
+
+    p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .navigation ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
+}
